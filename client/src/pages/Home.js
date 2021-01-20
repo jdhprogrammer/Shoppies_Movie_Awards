@@ -1,17 +1,17 @@
 import React from "react";
-import { Col, Row, Container } from "../components/Grid";
-import CreatePostForm from "../components/CreatePostForm";
-import PostsList from "../components/PostsList";
+import {Col, Row, Container} from "../components/Grid";
+import CreateBookForm from "../components/CreateBookForm";
+import BooksList from "../components/BooksList";
 
 const Home = () => {
   return (
     <Container fluid>
       <Row>
         <Col size="md-6">
-          <CreatePostForm />
+          <CreateBookForm />
         </Col>
         <Col size="md-6 sm-12">
-          <PostsList />
+          <BooksList />
         </Col>
       </Row>
     </Container>

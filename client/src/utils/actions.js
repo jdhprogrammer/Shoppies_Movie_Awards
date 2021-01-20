@@ -1,7 +1,7 @@
-export const UPDATE_POSTS = "UPDATE_POSTS";
-export const REMOVE_POST = "REMOVE_POST";
-export const SET_CURRENT_POST = "SET_CURRENT_POST";
-export const ADD_POST = "ADD_POST";
+export const UPDATE_BOOKS = "UPDATE_BOOKS";
+export const REMOVE_BOOK = "REMOVE_BOOK";
+export const SET_CURRENT_BOOK = "SET_CURRENT_BOOK";
+export const ADD_BOOK = "ADD_BOOK";
 export const LOADING = "LOADING";
 
 export const ADD_FAVORITE = "ADD_FAVORITE";

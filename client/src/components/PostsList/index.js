@@ -3,58 +3,58 @@ import { ListItem, List } from "../List";
 import DeleteBtn from "../DeleteBtn";
 import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
-import { REMOVE_POST, UPDATE_POSTS, LOADING } from "../../utils/actions";
+import { REMOVE_BOOK, UPDATE_BOOKS, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
 
-function PostsList() {
+function BooksList() {
   const [state, dispatch] = useStoreContext();
 
-  const removePost = id => {
-    API.deletePost(id)
+  const removeBook = id => {
+    API.deleteBook(id)
       .then(() => {
         dispatch({
-          type: REMOVE_POST,
+          type: REMOVE_BOOK,
           _id: id
         });
       })
       .catch(err => console.log(err));
   };
 
-  const getPosts = () => {
+  const getBooks = () => {
     dispatch({ type: LOADING });
-    API.getPosts()
+    API.getBooks()
       .then(results => {
         dispatch({
-          type: UPDATE_POSTS,
-          posts: results.data
+          type: UPDATE_BOOKS,
+          books: results.data
         });
       })
       .catch(err => console.log(err));
   };
 
   useEffect(() => {
-    getPosts();
+    getBooks();
   }, []);
 
   return (
     <div>
-      <h1>All Blog Posts</h1>
-      <h3 className="mb-5 mt-5">Click on a post to view</h3>
-      {state.posts.length ? (
+      <h1>All Blog Books</h1>
+      <h3 className="mb-5 mt-5">Click on a book to view</h3>
+      {state.books.length ? (
         <List>
-          {state.posts.map(post => (
-            <ListItem key={post._id}>
-              <Link to={"/posts/" + post._id}>
+          {state.books.map(book => (
+            <ListItem key={book._id}>
+              <Link to={"/books/" + book._id}>
                 <strong>
-                  {post.title} by {post.author}
+                  {book.title} by {book.author}
                 </strong>
               </Link>
-              <DeleteBtn onClick={() => removePost(post._id)} />
+              <DeleteBtn onClick={() => removeBook(book._id)} />
             </ListItem>
           ))}
         </List>
       ) : (
-        <h3>You haven't added any posts yet!</h3>
+        <h3>You haven't added any books yet!</h3>
       )}
       <div className="mt-5">
         <Link to="favorites">View favorites</Link>
@@ -63,4 +63,4 @@ function PostsList() {
   );
 }
 
-export default PostsList;
+export default BooksList;

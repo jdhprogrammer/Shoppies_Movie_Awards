@@ -1,9 +1,9 @@
-import React, { createContext, useReducer, useContext } from "react";
+import React, {createContext, useReducer, useContext} from "react";
 import {
-  SET_CURRENT_POST,
-  REMOVE_POST,
-  UPDATE_POSTS,
-  ADD_POST,
+  SET_CURRENT_BOOK,
+  REMOVE_BOOK,
+  UPDATE_BOOKS,
+  ADD_BOOK,
   ADD_FAVORITE,
   UPDATE_FAVORITES,
   REMOVE_FAVORITE,
@@ -11,80 +11,82 @@ import {
 } from "./actions";
 
 const StoreContext = createContext();
-const { Provider } = StoreContext;
+const {Provider} = StoreContext;
 
 const reducer = (state, action) => {
   switch (action.type) {
-  case SET_CURRENT_POST:
-    return {
-      ...state,
-      currentPost: action.post,
-      loading: false
-    };
+    case SET_CURRENT_BOOK:
+      return {
+        ...state,
+        currentBook: action.book,
+        loading: false
+      };
 
-  case UPDATE_POSTS:
-    return {
-      ...state,
-      posts: [...action.posts],
-      loading: false
-    };
+    case UPDATE_BOOKS:
+      return {
+        ...state,
+        books: [...action.books],
+        loading: false
+      };
 
-  case ADD_POST:
-    return {
-      ...state,
-      posts: [action.post, ...state.posts],
-      loading: false
-    };
+    case ADD_BOOK:
+      return {
+        ...state,
+        books: [action.book, ...state.books],
+        loading: false
+      };
 
-  case REMOVE_POST:
-    return {
-      ...state,
-      posts: state.posts.filter((post) => {
-        return post._id !== action._id; 
-      })
-    };
+    case REMOVE_BOOK:
+      return {
+        ...state,
+        books: state.books.filter((book) => {
+          return book._id !== action._id;
+        })
+      };
 
-  case ADD_FAVORITE:
-    return {
-      ...state,
-      favorites: [action.post, ...state.favorites],
-      loading: false
-    };
+    case ADD_FAVORITE:
+      return {
+        ...state,
+        favorites: [action.book, ...state.favorites],
+        loading: false
+      };
 
-  case UPDATE_FAVORITES:
-    return {
-      ...state,
-      favorites: [...state.favorites],
-      loading: false
-    };
+    case UPDATE_FAVORITES:
+      return {
+        ...state,
+        favorites: [...state.favorites],
+        loading: false
+      };
 
-  case REMOVE_FAVORITE:
-    return {
-      ...state,
-      favorites: state.favorites.filter((post) => {
-        return post._id !== action._id; 
-      })
-    };
+    case REMOVE_FAVORITE:
+      return {
+        ...state,
+        favorites: state.favorites.filter((book) => {
+          return book._id !== action._id;
+        })
+      };
 
-  case LOADING:
-    return {
-      ...state,
-      loading: true
-    };
+    case LOADING:
+      return {
+        ...state,
+        loading: true
+      };
 
-  default:
-    return state;
+    default:
+      return state;
   }
 };
 
-const StoreProvider = ({ value = [], ...props }) => {
+const StoreProvider = ({value = [], ...props}) => {
   const [state, dispatch] = useReducer(reducer, {
-    posts: [],
-    currentPost: {
+    books: [],
+    currentBook: {
       _id: 0,
       title: "",
-      body: "",
-      author: ""
+      authors: "",
+      description: "",
+      image: "",
+      link: "",
     },
     favorites: [],
     loading: false
@@ -97,4 +99,4 @@ const useStoreContext = () => {
   return useContext(StoreContext);
 };
 
-export { StoreProvider, useStoreContext };
+export {StoreProvider, useStoreContext};
