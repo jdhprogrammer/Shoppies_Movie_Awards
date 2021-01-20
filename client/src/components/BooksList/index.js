@@ -38,7 +38,7 @@ function BooksList() {
 
   return (
     <div>
-      <h1>All Blog Books</h1>
+      <h1>All Google Books</h1>
       <h3 className="mb-5 mt-5">Click on a book to view</h3>
       {state.books.length ? (
         <List>

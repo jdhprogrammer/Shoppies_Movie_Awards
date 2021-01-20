@@ -38,7 +38,7 @@ function CreateBookForm() {
           src={bookSearchImage}
         />
       </div>
-      <h1>Create a blog book</h1>
+      <h1>Create a Google book</h1>
       <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
         <input className="form-control mb-5" required ref={titleRef} placeholder="Title" />
         <textarea className="form-control mb-5" required ref={bodyRef} placeholder="Body" />
