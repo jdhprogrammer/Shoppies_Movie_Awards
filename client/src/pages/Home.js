@@ -1,14 +1,14 @@
 import React from "react";
 import {Col, Row, Container} from "../components/Grid";
-import CreateBookForm from "../components/CreateBookForm";
-import BooksList from "../components/BooksList";
+import SearchBooks from "../components/SearchBooks/SearchBooks";
+import BooksList from "../components/BooksList/BooksList";
 
 const Home = () => {
   return (
     <Container fluid>
       <Row>
         <Col size="md-6">
-          <CreateBookForm />
+          <SearchBooks />
         </Col>
         <Col size="md-6 sm-12">
           <BooksList />

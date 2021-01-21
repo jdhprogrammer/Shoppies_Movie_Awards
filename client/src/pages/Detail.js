@@ -1,18 +1,27 @@
 import React, {useEffect} from "react";
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {Col, Row, Container} from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import {useStoreContext} from "../utils/GlobalState";
 import {SET_CURRENT_BOOK, ADD_FAVORITE, REMOVE_FAVORITE} from "../utils/actions";
 
-const Detail = props => {
+const Detail = () => {
   const [state, dispatch] = useStoreContext();
 
+  const {id} = useParams();
+
   useEffect(() => {
-    API.getBook(props.match.params.id)
-      .then(res => dispatch({type: SET_CURRENT_BOOK, book: res.data}))
-      .catch(err => console.log(err));
+    console.log(id)
+    console.log("didmount")
+    console.log(state.books)
+    let book = state.books.filter((book) => (book._id === id))
+    console.log(book)
+    dispatch({
+      type: SET_CURRENT_BOOK,
+      book: book[0]
+    })
+
   }, []);
 
   const addFavorite = () => {
@@ -30,7 +39,7 @@ const Detail = props => {
   };
 
   return (
-    <>{state.currentBook ? (
+    <>{state.currentBook ? (console.log("currentbook = " + state.currentBook[0]),
       <Container fluid>
         <Row>
           <Col size="md-12">

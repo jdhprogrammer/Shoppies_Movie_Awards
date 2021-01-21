@@ -20,29 +20,29 @@ function BooksList() {
       .catch(err => console.log(err));
   };
 
-  const getBooks = () => {
-    dispatch({ type: LOADING });
-    API.getBooks()
-      .then(results => {
-        dispatch({
-          type: UPDATE_BOOKS,
-          books: results.data
-        });
-      })
-      .catch(err => console.log(err));
-  };
+  // const getBooks = () => {
+  //   dispatch({ type: LOADING });
+  //   API.getBooks()
+  //     .then(results => {
+  //       dispatch({
+  //         type: UPDATE_BOOKS,
+  //         books: results.data
+  //       });
+  //     })
+  //     .catch(err => console.log(err));
+  // };
 
   useEffect(() => {
-    getBooks();
-  }, []);
+    // getBooks();
+  }, [state]);
 
   return (
     <div>
       <h1>All Google Books</h1>
       <h3 className="mb-5 mt-5">Click on a book to view</h3>
-      {state.books.length ? (
+      {state.books.length ? ( console.log(state.books),
         <List>
-          {state.books.map(book => (
+          {state.books.slice().reverse().map(book => (
             <ListItem key={book._id}>
               <Link to={"/books/" + book._id}>
                 <strong>

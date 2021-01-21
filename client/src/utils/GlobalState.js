@@ -80,10 +80,11 @@ const reducer = (state, action) => {
 const StoreProvider = ({value = [], ...props}) => {
   const [state, dispatch] = useReducer(reducer, {
     books: [],
+    results: [],
     currentBook: {
       _id: 0,
       title: "",
-      authors: "",
+      author: "",
       description: "",
       image: "",
       link: "",
