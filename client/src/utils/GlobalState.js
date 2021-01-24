@@ -3,6 +3,7 @@ import {
   SET_CURRENT_BOOK,
   REMOVE_BOOK,
   UPDATE_BOOKS,
+  UPDATE_SEARCH_BOOKS,
   ADD_BOOK,
   ADD_FAVORITE,
   UPDATE_FAVORITES,
@@ -25,6 +26,13 @@ const reducer = (state, action) => {
     case UPDATE_BOOKS:
       return {
         ...state,
+        savedBooks: [...action.savedBooks],
+        loading: false
+      };
+
+    case UPDATE_SEARCH_BOOKS:
+      return {
+        ...state,
         books: [...action.books],
         loading: false
       };
@@ -39,8 +47,8 @@ const reducer = (state, action) => {
     case REMOVE_BOOK:
       return {
         ...state,
-        books: state.books.filter((book) => {
-          return book._id !== action._id;
+        savedBooks: state.savedBooks.filter((book) => {
+          return book._id !== action._id
         })
       };
 
@@ -62,7 +70,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         favorites: state.favorites.filter((book) => {
-          return book._id !== action._id;
+          return book.id !== action.id;
         })
       };
 
@@ -80,9 +88,10 @@ const reducer = (state, action) => {
 const StoreProvider = ({value = [], ...props}) => {
   const [state, dispatch] = useReducer(reducer, {
     books: [],
-    results: [],
+    savedBooks: [],
     currentBook: {
       _id: 0,
+      id: 0,
       title: "",
       author: "",
       description: "",

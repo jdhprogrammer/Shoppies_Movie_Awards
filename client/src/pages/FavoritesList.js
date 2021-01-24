@@ -16,7 +16,7 @@ const FavoritesList = () => {
   const removeFromFavorites = id => {
     dispatch({
       type: REMOVE_FAVORITE,
-      _id: id
+      id: id
     });
   };
 
@@ -25,19 +25,19 @@ const FavoritesList = () => {
   }, []);
 
   return (
-    <div className="container mb-5 mt-5">
-      <h1 className="text-center">Here's All of Your Favorite Books</h1>
+    <div className="container mb-2 mt-2">
+      <h3 className="text-center">Here's All of Your Favorite Books</h3>
       {state.favorites.length ? (
         <List>
-          <h3 className="mb-5 mt-5">Click on a book to view in detail</h3>
+          <h3 className="mb-2 mt-2">Click on a book to view in detail</h3>
           {state.favorites.map(book => (
-            <ListItem key={book._id}>
-              <Link to={"/books/" + book._id}>
+            <ListItem key={book.id}>
+              <Link to={"/books/" + book.id}>
                 <strong>
                   {book.title} by {book.author}
                 </strong>
               </Link>
-              <DeleteBtn onClick={() => removeFromFavorites(book._id)} />
+              <DeleteBtn onClick={() => removeFromFavorites(book.id)} />
             </ListItem>
           ))}
         </List>

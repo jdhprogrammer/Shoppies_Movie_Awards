@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import {Link, useParams} from "react-router-dom";
-import {Col, Row, Container} from "../components/Grid";
-import Jumbotron from "../components/Jumbotron";
+import Jumbotron from "react-bootstrap/Jumbotron";
+import {Col, Row, Container, Card, Button} from "react-bootstrap";
 import API from "../utils/API";
 import {useStoreContext} from "../utils/GlobalState";
 import {SET_CURRENT_BOOK, ADD_FAVORITE, REMOVE_FAVORITE} from "../utils/actions";
@@ -12,11 +12,7 @@ const Detail = () => {
   const {id} = useParams();
 
   useEffect(() => {
-    console.log(id)
-    console.log("didmount")
-    console.log(state.books)
-    let book = state.books.filter((book) => (book._id === id))
-    console.log(book)
+    let book = state.books.filter((book) => (book.id === id))
     dispatch({
       type: SET_CURRENT_BOOK,
       book: book[0]
@@ -34,44 +30,43 @@ const Detail = () => {
   const removeFavorite = () => {
     dispatch({
       type: REMOVE_FAVORITE,
-      _id: state.currentBook._id
+      id: state.currentBook.id
     });
   };
 
   return (
-    <>{state.currentBook ? (console.log("currentbook = " + state.currentBook[0]),
-      <Container fluid>
+    <>{state.currentBook ? (console.log("currentbook = " + state.currentBook),
+      <Container>
         <Row>
-          <Col size="md-12">
-            <Jumbotron>
-              <h1>
-                {state.currentBook.title} by {state.currentBook.author}
-              </h1>
-            </Jumbotron>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-10 md-offset-1">
-            <article>
-              <h1>Content:</h1>
-              <p>{state.currentBook.body}</p>
-            </article>
+          <Col size="md-10" style={{paddingTop: '10px'}}>
+            <Card className="mx-auto" style={{width: '18rem'}}>
+              <Card.Img alt={state.currentBook.title} src={state.currentBook.image} />
+              <Card.Body>
+                <Card.Title>{state.currentBook.title}
+                  by
+                  {state.currentBook.author}</Card.Title>
+                <Card.Text>
+                  Content:
+                  <p>{state.currentBook.description}</p>
+                </Card.Text><Link to="/">
+                  <Button variant="primary">← Back to Directory</Button>
+                </Link>
+              </Card.Body>
+            </Card>
           </Col>
           {state.favorites.indexOf(state.currentBook) !== -1 ? (
-            <button className="btn btn-danger" onClick={removeFavorite}>
+            <Button className="btn btn-danger" onClick={removeFavorite}>
               Remove from Favorites!
-            </button>
+            </Button>
           ) : (
-              <button className="btn" onClick={addFavorite}>
+              <Button className="btn" onClick={addFavorite}>
                 ❤️ Add to Favorites
-              </button>
+              </Button>
             )}
         </Row>
-        <Row>
-          <Col size="md-2">
-            <Link to="/">← Back to Books</Link>
-          </Col>
-        </Row>
+        <Col size="md-2">
+          <Link to="/">← Back to Books</Link>
+        </Col>
       </Container>
     ) : (
         <div>loading...</div>
