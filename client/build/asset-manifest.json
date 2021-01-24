@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.38d7648b.chunk.css",
+    "main.js": "/static/js/main.a1a25edb.chunk.js",
+    "main.js.map": "/static/js/main.a1a25edb.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.561f0976.js",
+    "runtime-main.js.map": "/static/js/runtime-main.561f0976.js.map",
+    "static/js/2.a1abeefa.chunk.js": "/static/js/2.a1abeefa.chunk.js",
+    "static/js/2.a1abeefa.chunk.js.map": "/static/js/2.a1abeefa.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.e208e83618730ba09d91657c73e27174.js": "/precache-manifest.e208e83618730ba09d91657c73e27174.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.38d7648b.chunk.css.map": "/static/css/main.38d7648b.chunk.css.map",
+    "static/js/2.a1abeefa.chunk.js.LICENSE.txt": "/static/js/2.a1abeefa.chunk.js.LICENSE.txt",
+    "static/media/book_search.jpg": "/static/media/book_search.19119a80.jpg",
+    "static/media/googlebooks.png": "/static/media/googlebooks.9be27032.png",
+    "static/media/row-different-colorful-books-vector-flat-illustration-educational-entertainment-textbooks-multicolored-covers-203771386.jpg": "/static/media/row-different-colorful-books-vector-flat-illustration-educational-entertainment-textbooks-multicolored-covers-203771386.49b281f0.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.561f0976.js",
+    "static/js/2.a1abeefa.chunk.js",
+    "static/css/main.38d7648b.chunk.css",
+    "static/js/main.a1a25edb.chunk.js"
+  ]
+}
