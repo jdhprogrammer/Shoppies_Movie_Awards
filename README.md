@@ -22,17 +22,18 @@ Project Deployment: [https://jdhprogrammer-google-books.herokuapp.com/](https://
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-  * [Description](#description)
+  <!-- * [Description](#description)
   * [User Story](#user-story)
   * [More Details](#more-details)
-  * [Technologies](#technologies)
+  * [Technologies](#technologies) -->
 
 * [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
+  <!-- * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-  * [Usage](#usage)
+  * [Usage](#usage) -->
 
 * [Contributing](#contributing)
+* [Screenshots](#Screenshots)
 * [Acknowledgements](#acknowledgements)
 * [License](#license)
 * [Contact](#contact)
@@ -107,35 +108,58 @@ Any contributions you make are **greatly appreciated**.
   
 ### Screenshots
 
+MERN - Google Books Search. <br>
 [<img src="./Assets/Screenshots/Google_Books_Full_Screen.jpeg?raw=true" height="300"/>](./Assets/Screenshots/Google_Books_Full_Screen.jpeg?raw=true)
 <br>
 
+Google Books Search - Search By Title, Author, Subject. <br>
 [<img src="./Assets/Screenshots/Google_Books_Search_by_each.jpeg?raw=true" height="300"/>](./Assets/Screenshots/Google_Books_Search_by_each.jpeg?raw=true)
 <br>
 
+Styling Edits & Responsive Component Layout (with Usability in Mind). <br>
 [<img src="./Assets/Screenshots/Google_Books_Styling_reponsive_ordering.jpeg?raw=true" height="300"/>](./Assets/Screenshots/Google_Books_Styling_reponsive_ordering.jpeg?raw=true)
 <br>
 
+Advanced Javascript, API Queries, Switch Statements, Promises, Callbacks, UseRef. <br>
 [<img src="./Assets/Screenshots/Google_Books_Search_by_JS.jpeg?raw=true" height="300"/>](./Assets/Screenshots/Google_Books_Search_by_JS.jpeg?raw=true)
 <br>
 
+Axios Requests, Express Routes, Params, Requests to DataBase. <br>
 [<img src="./Assets/Screenshots/Google_Books_Search_by_axios.jpeg?raw=true" height="300"/>](./Assets/Screenshots/Google_Books_Search_by_axios.jpeg?raw=true)
 <br>
 
+React GlobalState - Redux Style Setup. State, Context, Provider, Dispatch, Actions, Reducer. <br>
 [<img src="./Assets/Screenshots/Google_Books_Global_State.jpeg?raw=true" height="300"/>](./Assets/Screenshots/Google_Books_Global_State.jpeg?raw=true)
 <br>
 
+Dynamically Creating React Components {List Items, Buttons, Modals} <br>
+with Data Mapped from the State of the Book Search Results. <br>
 [<img src="./Assets/Screenshots/Google_Books_dynamically_mapping_books_list_buttons_modals.jpeg?raw=true" height="300"/>](./Assets/Screenshots/Google_Books_dynamically_mapping_books_list_buttons_modals.jpeg?raw=true) 
+
+<br>
   
 ### Acknowledgements
+<br>
+Dane Edwards - Coding Bootcamp Instructor  
+https://developers.google.com/books/docs/v1/using  
+https://reactjs.org/docs/dom-elements.html  
+https://react-bootstrap.github.io/components/modal/  
+https://react-bootstrap.netlify.app/components/alerts/#additional-content  
+https://bootstrapcreative.com/bootstrap-push-pull-column-ordering-tutorial/  
+https://stackoverflow.com/questions/2672380/how-do-i-check-in-javascript-if-a-value-exists-at-a-certain-array-index  
+https://stackoverflow.com/questions/33846682/react-onclick-function-fires-on-render  
+https://stackoverflow.com/questions/56711503/how-to-fix-422-unprocessable-entity-when-sending-a-post-request-to-redmine-api  
+https://kevinyckim33.medium.com/jsx-spread-operator-component-props-meaning-3c9bcadd2493  
+https://stackoverflow.com/questions/3414916/display-only-10-characters-of-a-long-string
 
-Dane Edwards - Coding Bootcamp Instructor, https://developers.google.com/books/docs/v1/using, https://reactjs.org/docs/dom-elements.html, https://react-bootstrap.github.io/components/modal/, https://react-bootstrap.netlify.app/components/alerts/#additional-content, https://bootstrapcreative.com/bootstrap-push-pull-column-ordering-tutorial/, https://stackoverflow.com/questions/2672380/how-do-i-check-in-javascript-if-a-value-exists-at-a-certain-array-index, https://stackoverflow.com/questions/33846682/react-onclick-function-fires-on-render, https://stackoverflow.com/questions/56711503/how-to-fix-422-unprocessable-entity-when-sending-a-post-request-to-redmine-api, https://kevinyckim33.medium.com/jsx-spread-operator-component-props-meaning-3c9bcadd2493, https://stackoverflow.com/questions/3414916/display-only-10-characters-of-a-long-string
-  
+<br>
+<br>
 
 ## License
 
 Distributed under the [MIT](https://choosealicense.com/licenses/mit/). See LICENSE for more information.
   
+<br>
 
 ## Contact
 
@@ -143,7 +167,7 @@ David Harris - jdh.programmer@gmail.com
 
 Project Link: [https://github.com/jdhprogrammer/React-GlobalState_Book-Search](https://github.com/jdhprogrammer/React-GlobalState_Book-Search)
 
-<br>
+
 
 Project Deployment: [https://jdhprogrammer-google-books.herokuapp.com/](https://jdhprogrammer-google-books.herokuapp.com/)<br>
 
