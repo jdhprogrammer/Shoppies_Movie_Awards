@@ -117,7 +117,7 @@ Google Books Search - Search By Title, Author, Subject. <br>
 <br>
 
 Styling Edits & Responsive Component Layout (with Usability in Mind). <br>
-[<img src="./Assets/Screenshots/Google_Books_Styling_reponsive_ordering.jpeg?raw=true" height="300"/>](./Assets/Screenshots/Google_Books_Styling_reponsive_ordering.jpeg?raw=true)
+[<img src="./Assets/Screenshots/Google_Books_Styling_responsive_ordering.jpeg?raw=true" height="300"/>](./Assets/Screenshots/Google_Books_Styling_responsive_ordering.jpeg?raw=true)
 <br>
 
 Advanced Javascript, API Queries, Switch Statements, Promises, Callbacks, UseRef. <br>

@@ -40,29 +40,8 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 3. Using mongoose, then create a Book schema.
 
-4. At a minimum, books should have each of the following fields:
-
-* `title` - Title of the book from the Google Books API
-
-* `authors` - The books's author(s) as returned from the Google Books API
-
-* `description` - The book's description as returned from the Google Books API
-
-* `image` - The Book's thumbnail image as returned from the Google Books API
-
-* `link` - The Book's information link as returned from the Google Books API
-
-* Creating `documents` in your `books` collection similar to the following:
-
-    ```js
-    {
-      authors: ["Suzanne Collins"]
-      description: "Set in a dark vision of the near future, a terrifying reality TV show is taking place. Twelve boys and twelve girls are forced to appear in a live event called The Hunger Games. There is only one rule: kill or be killed. When sixteen-year-old Katniss Everdeen steps forward to take her younger sister's place in the games, she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature."
-      image: "http://books.google.com/books/content?id=sazytgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-      link: "http://books.google.com/books?id=sazytgAACAAJ&dq=title:The+Hunger+Games&hl=&source=gbs_api"
-      title: "The Hunger Games"
-    }
-    ```
+4. At a minimum, books should have each of the following fields: * `title` - Title of the book from the Google Books API * `authors` - The books's author(s) as returned from the Google Books API * `description` - The book's description as returned from the Google Books API * `image` - The Book's thumbnail image as returned from the Google Books API * `link` - The Book's information link as returned from the Google Books API * Creating `documents` in your `books` collection similar to the following: * authors: ["Suzanne Collins"] * description: "Set in a dark vision of the near future, a terrifying reality TV show is taking place. Twelve boys and twelve girls are forced to appear in a live event called The Hunger Games. There * only one rule: kill or be killed. When sixteen-year-old Katniss Everdeen steps forward to take her younger sister's place in the games, she sees it as a death sentence. But Katniss has been close * death before. For her, survival is second nature." * image: "http://books.google.com/books/content?id=sazytgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" * link: "http://books.google.com/books?id=sazytgAACAAJ&dq=title:The+Hunger+Games&hl=&source=gbs_api" * title: "The Hunger Games"
+   
 
 5. Create a layout similar to the mockups displayed above. This should be a SPA (Single Page Application) that uses [`react-router-dom`](https://github.com/reactjs/react-router) to navigate, hide and show your React components without changing the route within Express.
 
@@ -133,3 +112,13 @@ Please see [Heroku’s Account Verification Information](https://devcenter.herok
 If you have any questions about this project or the material we have covered, please book them in the community channels in slack so that your fellow developers can help you! If you're still having trouble, you can come to office hours for assistance from your instructor and TAs.
 
 **Good Luck!**
+
+
+screenshots
+
+Google_Books_Full_Screen.jpeg, Google_Books_Search_by_each.jpeg, Google_Books_Styling_reponsive_ordering.jpeg, Google_Books_Search_by_JS.jpeg, Google_Books_Search_by_axios.jpeg, Google_Books_Global_State.jpeg, Google_Books_dynamically_mapping_books_list_buttons_modals.jpeg
+
+credits
+
+
+Dane Edwards - Coding Bootcamp Instructor, https://developers.google.com/books/docs/v1/using, https://reactjs.org/docs/dom-elements.html, https://react-bootstrap.github.io/components/modal/, https://react-bootstrap.netlify.app/components/alerts/#additional-content, https://bootstrapcreative.com/bootstrap-push-pull-column-ordering-tutorial/, https://stackoverflow.com/questions/2672380/how-do-i-check-in-javascript-if-a-value-exists-at-a-certain-array-index, https://stackoverflow.com/questions/33846682/react-onclick-function-fires-on-render, https://stackoverflow.com/questions/56711503/how-to-fix-422-unprocessable-entity-when-sending-a-post-request-to-redmine-api, https://kevinyckim33.medium.com/jsx-spread-operator-component-props-meaning-3c9bcadd2493, https://stackoverflow.com/questions/3414916/display-only-10-characters-of-a-long-string

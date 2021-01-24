@@ -20,8 +20,7 @@ export function Col({size, children, order}) {
       className={size
         .split(" ")
         .map(size => "col-" + size)
-        .join(" ") + order}
-    >
+        .join(" ") + order}>
       {children}
     </div>
   );

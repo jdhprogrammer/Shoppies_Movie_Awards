@@ -11,7 +11,7 @@ const NoMatch = () => {
             <h3>404 Page Not Found</h3>
             <h3>
               <span role="img" aria-label="Face With Rolling Eyes Emoji">
-                🙄
+                Try Refreshing the Page.
               </span>
             </h3>
           </Jumbotron>
