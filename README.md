@@ -39,7 +39,7 @@ Project Deployment: [https://jdhprogrammer-google-books.herokuapp.com/](https://
 
 ## About The Project
   
-[<img src="./public/assets/images/screenshots/Google_Books_Full_Screen.jpeg?raw=true" height="300"/>](./public/assets/images/screenshots/Google_Books_Full_Screen.jpeg?raw=true)
+[<img src="./Assets/Screenshots/Google_Books_Full_Screen.jpeg?raw=true" height="400"/>](./Assets/Screenshots/Google_Books_Full_Screen.jpeg?raw=true)
 
 ### Description
 
@@ -50,7 +50,15 @@ In this activity, you'll create a new React-based Google Books Search app. This 
 #### User Story
 
 ```
-As a person I like to Read Books... or at least think about reading books... or at least making lists of books that I could think about reading one day. As this Kind of Person, I would like to be able to Search for Books using the Google Books Library and find books that I am interested in. I should be able to Save books to my virtual bookshelf that I want to read later. And I should be able to delete books from that saved books list, when i decide i will never read them.
+As a person I like to Read Books... 
+or at least think about reading books... 
+or at least making lists of books that I could think about reading one day. 
+As this Kind of Person, I would like to be able to Search for Books 
+using the Google Books Library and find books that I am interested in. 
+I should be able to Save books to my 
+virtual bookshelf that I want to read later. 
+And I should be able to delete books from that saved books list, 
+when i decide i will never read them.
 ```
 
 #### More Details
@@ -62,7 +70,10 @@ Worked really hard on this. Both on getting it to look really nice and function 
 ### Technologies Used
 
 ```
-* React.  * GlobalState.  * React-Router-Dom.  * React-Bootstrap.  * Axios.  * NodeJS.  * Express.  * MongoDB.  * Mongoose.  * Hooks.  * UseEffect.  * useContext.  * Modals.  * Google Book API.  
+* React.  * GlobalState.  * React-Router-Dom.  * React-Bootstrap.  
+* Axios.  * NodeJS.  * Express.  * MongoDB. * Mongoose.  
+* Hooks.  * UseEffect.  * useContext.  
+* Modals.  * Google Book API.  
 ```
 
 
@@ -96,7 +107,25 @@ Any contributions you make are **greatly appreciated**.
   
 ### Screenshots
 
-[<img src="./public/assets/images/screenshots/Google_Books_Full_Screen.jpeg?raw=true" height="300"/>](./public/assets/images/screenshots/Google_Books_Full_Screen.jpeg?raw=true)[<img src="./public/assets/images/screenshots/Google_Books_Search_by_each.jpeg?raw=true" height="300"/>](./public/assets/images/screenshots/Google_Books_Search_by_each.jpeg?raw=true)[<img src="./public/assets/images/screenshots/Google_Books_Styling_reponsive_ordering.jpeg?raw=true" height="300"/>](./public/assets/images/screenshots/Google_Books_Styling_reponsive_ordering.jpeg?raw=true)[<img src="./public/assets/images/screenshots/Google_Books_Search_by_JS.jpeg?raw=true" height="300"/>](./public/assets/images/screenshots/Google_Books_Search_by_JS.jpeg?raw=true)[<img src="./public/assets/images/screenshots/Google_Books_Search_by_axios.jpeg?raw=true" height="300"/>](./public/assets/images/screenshots/Google_Books_Search_by_axios.jpeg?raw=true)[<img src="./public/assets/images/screenshots/Google_Books_Global_State.jpeg?raw=true" height="300"/>](./public/assets/images/screenshots/Google_Books_Global_State.jpeg?raw=true)[<img src="./public/assets/images/screenshots/Google_Books_dynamically_mapping_books_list_buttons_modals.jpeg?raw=true" height="300"/>](./public/assets/images/screenshots/Google_Books_dynamically_mapping_books_list_buttons_modals.jpeg?raw=true) 
+[<img src="./Assets/Screenshots/Google_Books_Full_Screen.jpeg?raw=true" height="300"/>](./Assets/Screenshots/Google_Books_Full_Screen.jpeg?raw=true)
+<br>
+
+[<img src="./Assets/Screenshots/Google_Books_Search_by_each.jpeg?raw=true" height="300"/>](./Assets/Screenshots/Google_Books_Search_by_each.jpeg?raw=true)
+<br>
+
+[<img src="./Assets/Screenshots/Google_Books_Styling_reponsive_ordering.jpeg?raw=true" height="300"/>](./Assets/Screenshots/Google_Books_Styling_reponsive_ordering.jpeg?raw=true)
+<br>
+
+[<img src="./Assets/Screenshots/Google_Books_Search_by_JS.jpeg?raw=true" height="300"/>](./Assets/Screenshots/Google_Books_Search_by_JS.jpeg?raw=true)
+<br>
+
+[<img src="./Assets/Screenshots/Google_Books_Search_by_axios.jpeg?raw=true" height="300"/>](./Assets/Screenshots/Google_Books_Search_by_axios.jpeg?raw=true)
+<br>
+
+[<img src="./Assets/Screenshots/Google_Books_Global_State.jpeg?raw=true" height="300"/>](./Assets/Screenshots/Google_Books_Global_State.jpeg?raw=true)
+<br>
+
+[<img src="./Assets/Screenshots/Google_Books_dynamically_mapping_books_list_buttons_modals.jpeg?raw=true" height="300"/>](./Assets/Screenshots/Google_Books_dynamically_mapping_books_list_buttons_modals.jpeg?raw=true) 
   
 ### Acknowledgements
 
