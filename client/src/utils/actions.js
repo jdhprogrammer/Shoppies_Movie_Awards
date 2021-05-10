@@ -1,8 +1,8 @@
-export const UPDATE_BOOKS = "UPDATE_BOOKS";
-export const UPDATE_SEARCH_BOOKS = "UPDATE_SEARCH_BOOKS";
-export const REMOVE_BOOK = "REMOVE_BOOK";
-export const SET_CURRENT_BOOK = "SET_CURRENT_BOOK";
-export const ADD_BOOK = "ADD_BOOK";
+export const UPDATE_MOVIES = "UPDATE_MOVIES";
+export const UPDATE_SEARCH_MOVIES = "UPDATE_SEARCH_MOVIES";
+export const REMOVE_MOVIE = "REMOVE_MOVIE";
+export const SET_CURRENT_MOVIE = "SET_CURRENT_MOVIE";
+export const ADD_MOVIE = "ADD_MOVIE";
 export const LOADING = "LOADING";
 
 export const ADD_FAVORITE = "ADD_FAVORITE";

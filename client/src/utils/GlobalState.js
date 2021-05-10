@@ -1,10 +1,10 @@
 import React, {createContext, useReducer, useContext} from "react";
 import {
-  SET_CURRENT_BOOK,
-  REMOVE_BOOK,
-  UPDATE_BOOKS,
-  UPDATE_SEARCH_BOOKS,
-  ADD_BOOK,
+  SET_CURRENT_MOVIE,
+  REMOVE_MOVIE,
+  UPDATE_MOVIES,
+  UPDATE_SEARCH_MOVIES,
+  ADD_MOVIE,
   ADD_FAVORITE,
   UPDATE_FAVORITES,
   REMOVE_FAVORITE,
@@ -16,46 +16,46 @@ const {Provider} = StoreContext;
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case SET_CURRENT_BOOK:
+    case SET_CURRENT_MOVIE:
       return {
         ...state,
-        currentBook: action.book,
+        currentMovie: action.movie,
         loading: false
       };
 
-    case UPDATE_BOOKS:
+    case UPDATE_MOVIES:
       return {
         ...state,
-        savedBooks: [...action.savedBooks],
+        nominations: [...action.nominations],
         loading: false
       };
 
-    case UPDATE_SEARCH_BOOKS:
+    case UPDATE_SEARCH_MOVIES:
       return {
         ...state,
-        books: [...action.books],
+        movies: [...action.movies],
         loading: false
       };
 
-    case ADD_BOOK:
+    case ADD_MOVIE:
       return {
         ...state,
-        books: [action.book, ...state.books],
+        movies: [action.movie, ...state.movies],
         loading: false
       };
 
-    case REMOVE_BOOK:
+    case REMOVE_MOVIE:
       return {
         ...state,
-        savedBooks: state.savedBooks.filter((book) => {
-          return book._id !== action._id
+        nominations: state.nominations.filter((movie) => {
+          return movie._id !== action._id
         })
       };
 
     case ADD_FAVORITE:
       return {
         ...state,
-        favorites: [action.book, ...state.favorites],
+        favorites: [action.movie, ...state.favorites],
         loading: false
       };
 
@@ -69,8 +69,8 @@ const reducer = (state, action) => {
     case REMOVE_FAVORITE:
       return {
         ...state,
-        favorites: state.favorites.filter((book) => {
-          return book.id !== action.id;
+        favorites: state.favorites.filter((movie) => {
+          return movie.id !== action.id;
         })
       };
 
@@ -87,16 +87,14 @@ const reducer = (state, action) => {
 
 const StoreProvider = ({value = [], ...props}) => {
   const [state, dispatch] = useReducer(reducer, {
-    books: [],
-    savedBooks: [],
-    currentBook: {
-      _id: 0,
-      id: 0,
+    movies: [],
+    nominations: [],
+    currentMovie: {
       title: "",
-      author: "",
-      description: "",
-      image: "",
-      link: "",
+      year: "",
+      type: "",
+      poster: "",
+      id: ""
     },
     favorites: [],
     loading: false
