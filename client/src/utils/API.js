@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const BASE_URL = `http://www.omdbapi.com/?apikey=`
+const BASE_URL = `https://www.omdbapi.com/?apikey=`
 const TYPE_URL = `&type=movie`
 const SEARCH_URL = `&s=`
 const YEAR_URL = `&y=`
