@@ -97,7 +97,7 @@ function Nominations() {
           </List>
         </>
       ) : (
-        <h4 className="mt-5">no results yet...</h4>
+        <h4 className="mt-5">No Nominees yet...</h4>
       )}
       {/* <div className="mt-5">
         <Link to="favorites">View favorites</Link>

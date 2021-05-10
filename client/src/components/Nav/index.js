@@ -1,5 +1,6 @@
 import React from "react";
 import {useStoreContext} from "../../utils/GlobalState";
+import {Link} from "react-router-dom";
 
 import awards from "../../pages/images/omdb_shoppies_banner.jpg"
 import Image from "react-bootstrap/Image"
@@ -19,7 +20,8 @@ function NavBar() {
         backgroundImage: `url(${awards})`, backgroundSize: '1635px 120px', opacity: '50%'
       }}>
       </Jumbotron>
-      <h1 className="mb-0" style={{"position": "relative", "top": "-100px", "zIndex": "2", "color": "white", "textShadow": "5px 3px 5px #000000"}}>The Shoppies</h1>
+      <h1 className="mb-0" style={{"position": "relative", "top": "-100px", "zIndex": "2", "color": "white", "textShadow": "5px 3px 5px #000000"}}>
+        <Link style={{textDecoration: 'none', color: 'white'}} to='/'>The Shoppies</Link></h1>
 
     </div>
   );

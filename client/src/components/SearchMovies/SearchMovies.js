@@ -1,8 +1,10 @@
 import React, {useRef} from "react";
+import {Link} from 'react-router-dom';
 import {useStoreContext} from "../../utils/GlobalState";
 import {ADD_MOVIE, LOADING, UPDATE_MOVIES, UPDATE_SEARCH_MOVIES, REMOVE_MOVIE, REMOVE_FAVORITE} from "../../utils/actions";
 import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
+import {Row, Col} from "react-bootstrap"
 import FormControl from "react-bootstrap/FormControl";
 import Form from "react-bootstrap/Form";
 import API from "../../utils/API";
@@ -10,8 +12,6 @@ import movieSearchImage from "../../pages/images/movie_search.png";
 
 function SearchMovies() {
   const titleRef = useRef();
-  // const yearRef = useRef();
-  // const directorRef = useRef();
   const [state, dispatch] = useStoreContext();
 
   const searchFunction = result => {
@@ -84,8 +84,6 @@ function SearchMovies() {
         break;
     }
     titleRef.current.value = "";
-    // directorRef.current.value = "";
-    // yearRef.current.value = "";
   };
 
   const submitNominations = () => {
@@ -94,7 +92,7 @@ function SearchMovies() {
     })
     dispatch({type: LOADING});
     dispatch({type: UPDATE_MOVIES, nominations: []});
-    alert("Thank You for Submitting your Shoppie Movie Award Nominations! Check back next week to find out Who the Winners Are. =)")
+    // alert("Thank You for Submitting your Shoppie Movie Award Nominations! Check back next week to find out Who the Winners Are. =)")
   }
 
   const removeMovie = id => {
@@ -118,35 +116,45 @@ function SearchMovies() {
 
   return (
     <div id="nominations" className="text-center">
-      <h3 className="">Search Movies</h3>
-      <Form name="title" onSubmit={handleSubmit}>
-        <InputGroup className="mb-3 shadow">
-          <FormControl placeholder="Search By Title..."
-            aria-label="Search By Title..."
-            aria-describedby="basic-addon2" ref={titleRef} />
-          <InputGroup.Append>
-            <Button type={"submit"} variant="primary">Search</Button>
-          </InputGroup.Append>
-        </InputGroup>
-      </Form>
+      <Row xs={{order: 4}} md={{order: 4}}>
+        <Col xs={12} >
+          <h3 className="">Search Movies</h3>
+          <Form name="title" onSubmit={handleSubmit}>
+            <InputGroup className="mb-3 shadow">
+              <FormControl placeholder="Search By Title..."
+                aria-label="Search By Title..."
+                aria-describedby="basic-addon2" ref={titleRef} />
+              <InputGroup.Append>
+                <Button type={"submit"} variant="primary">Search</Button>
+              </InputGroup.Append>
+            </InputGroup>
+          </Form>
+        </Col>
+      </Row>
       {state.nominations.length >= 5 ?
-        <><strong>You have 5 Nominees!  </strong>
-          <Button className="m-2 mb-4 p-2 shadow" variant="warning"
-            onClick={() => submitNominations()}>
-            Submit Nominations
-        </Button></> : <div></div>}
-
-      <div className="jumbotron shadow" style={{"padding": "10px"}}>
-        <img
-          className="img-fluid img-thumbnail"
-          src={movieSearchImage}
-          style={{"width": "435px"}}
-        />
-      </div>
+        <Row xs={{order: 3}} md={{order: 2}}>
+          <Col xs={12} >
+            <><strong>You have 5 Nominees!  </strong>
+              <Button className="m-2 mb-4 p-2 shadow" variant="warning"
+                onClick={() => submitNominations()}>
+                <Link style={{textDecoration: 'none', color: 'black'}} to='/submit'>Submit Nominations</Link>
+              </Button></>
+          </Col>
+        </Row> : <div></div>}
+      <Row xs={{order: 2}} md={{order: 3}}>
+        <Col xs={12}>
+          <div className="jumbotron shadow" style={{"padding": "10px"}}>
+            <img
+              className="img-fluid img-thumbnail"
+              src={movieSearchImage}
+              style={{"width": "435px"}}
+            />
+          </div>
+        </Col>
+      </Row >
     </div>
   );
 }
 
 export default SearchMovies;
 
-// style={{"backgroundColor": `rgb(255, 255, 255, 0.5)`}}
