@@ -8,7 +8,7 @@ const SubmitDone = () => {
     <Container>
       <Row>
         <Col >
-          <Jumbotron className='text-center fluid'>
+          <Jumbotron className='text-center fluid p-4'>
             <h3>Thank You for your Nominations!</h3>
             <h3>
               <span>
