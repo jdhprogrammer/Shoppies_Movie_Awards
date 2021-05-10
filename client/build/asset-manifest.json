@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.38d7648b.chunk.css",
+    "main.js": "/static/js/main.ab7f404b.chunk.js",
+    "main.js.map": "/static/js/main.ab7f404b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8c2761b1.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8c2761b1.js.map",
+    "static/js/2.6ecacc76.chunk.js": "/static/js/2.6ecacc76.chunk.js",
+    "static/js/2.6ecacc76.chunk.js.map": "/static/js/2.6ecacc76.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c049954da7d3b8e9202693b971eb8a94.js": "/precache-manifest.c049954da7d3b8e9202693b971eb8a94.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.38d7648b.chunk.css.map": "/static/css/main.38d7648b.chunk.css.map",
+    "static/js/2.6ecacc76.chunk.js.LICENSE.txt": "/static/js/2.6ecacc76.chunk.js.LICENSE.txt",
+    "static/media/movie_award.png": "/static/media/movie_award.0ef1e44e.png",
+    "static/media/movie_search.png": "/static/media/movie_search.648caa76.png",
+    "static/media/omdb_shoppies_banner.jpg": "/static/media/omdb_shoppies_banner.ea2990a4.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8c2761b1.js",
+    "static/js/2.6ecacc76.chunk.js",
+    "static/css/main.38d7648b.chunk.css",
+    "static/js/main.ab7f404b.chunk.js"
+  ]
+}
