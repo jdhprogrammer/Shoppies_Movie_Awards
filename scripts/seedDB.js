@@ -1,22 +1,23 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-// This file empties the Books collection and inserts the books below
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bookSearchDB");
 
-const bookSeed = [
+// This file empties the Movies collection and inserts the movies below
+mongoose.connect(process.env.MONGODB_URI || `mongodb+srv://jdhprogrammer:Spoons081410!@cluster0.vjufe.mongodb.net/shoppiesDB?retryWrites=true&w=majority`);
+
+const movieSeed = [
   {
-    author: ["Suzanne Collins"],
-    description: "Set in a dark vision of the near future, a terrifying reality TV show is taking place. Twelve boys and twelve girls are forced to appear in a live event called The Hunger Games. There is only one rule: kill or be killed. When sixteen-year-old Katniss Everdeen steps forward to take her younger sister's place in the games, she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.",
-    image: "http://books.google.com/books/content?id=sazytgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    link: "http://books.google.com/books?id=sazytgAACAAJ&dq=title:The+Hunger+Games&hl=&source=gbs_api",
-    title: "The Hunger Games",
+    title: "Guardians of the Galaxy 2",
+    year: "2014",
+    id: "tt2015381",
+    type: "movie",
+    poster: "https://m.media-amazon.com/images/M/MV5BMTAwMjU5OTgxNjZeQTJeQWpwZ15BbWU4MDUxNDYxODEx._V1_SX300.jpg",
     date: new Date(Date.now())
   }
 ];
 
-db.Book.remove({})
-  .then(() => db.Book.collection.insertMany(bookSeed))
+db.Movie.remove({})
+  .then(() => db.Movie.collection.insertMany(movieSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
@@ -25,3 +26,5 @@ db.Book.remove({})
     console.error(err);
     process.exit(1);
   });
+
+  // `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.vjufe.mongodb.net/shoppiesDB?retryWrites=true&w=majority`;
