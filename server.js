@@ -1,5 +1,7 @@
 const express = require("express");
 
+require("dotenv").config();
+
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
@@ -16,7 +18,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bookSearchDB");
+mongoose.connect(process.env.MONGODB_URI || `mongodb+srv://jdhprogrammer:Spoons081410!@cluster0.vjufe.mongodb.net/shoppiesDB?retryWrites=true&w=majority`);
 
 // Start the API server
 app.listen(PORT, function () {
