@@ -14,6 +14,10 @@ Project Repository: [https://github.com/jdhprogrammer/Shoppies_Movie_Awards](htt
 <br>
 Project Deployment: [https://jdhprogrammer-shoppies.herokuapp.com/](https://jdhprogrammer-shoppies.herokuapp.com/)<br>
 
+<br/>
+
+[<img src="./Assets/Screenshots/Fullscreen_4nominations_realfavorites.jpeg?raw=true" height="300"/>](./Assets/Screenshots/Fullscreen_4nominations_realfavorites.jpeg?raw=true)
+<br/>
 
 
 ## Table of Contents
@@ -36,8 +40,6 @@ Project Deployment: [https://jdhprogrammer-shoppies.herokuapp.com/](https://jdhp
 
 ## About The Project
   
-[<img src="./Assets/Screenshots/Fullscreen_4nominations_realfavorites.jpeg?raw=true" height="300"/>](./Assets/Screenshots/Fullscreen_4nominations_realfavorites.jpeg?raw=true)
-<br/>
 
 ### Description
 
@@ -48,19 +50,32 @@ The Shoppies: Movie Awards Search and Nomination page.
 #### User Story
 
 ```
-The Shoppies: Movie Awards are coming up soon. A User should be able to visit this page, Search for Movies by title, View details for each movie result. Nominate up to 5 movies for the Shoppie Awards and submit those nominations.
+The Shoppies: Movie Awards are coming up soon. 
+A User should be able to visit this page, 
+Search for Movies by title, 
+View details for each movie result. 
+Nominate up to 5 movies for the Shoppie Awards 
+and submit those nominations.
 ```
 
 #### More Details
 
 ```
-1. Search results should come from OMDB's API (free API key: http://www.omdbapi.com/apikey.aspx). 2. Each search result should list at least its title, year of release and a button to nominate that film. 3. Updates to the search terms should update the result list 4. Movies in search results can be added and removed from the nomination list. 5. If a search result has already been nominated, disable its nominate button. 6. Display a banner when the user has 5 nominations.
+1. Search results should come from OMDB's API (free API key: http://www.omdbapi.com/apikey.aspx). 
+2. Each search result should list at least its title, year of release and a button to nominate that film. 
+3. Updates to the search terms should update the result list 
+4. Movies in search results can be added and removed from the nomination list. 
+5. If a search result has already been nominated, disable its nominate button. 
+6. Display a banner when the user has 5 nominations.
 ```
 
 ### Technologies Used
 
 ```
-* React.js.  * MongoDB.  * Express.  * Node.js.  * Hooks.  * Global State.  * Store Provider.  * Reducer.  * HTML.  * CSS.  * React-Bootstrap. Frontend. Backend. Heroku..  
+* React.js.  * MongoDB.  * Express.  * Node.js.  
+* Hooks.  * Global State.  * Store Provider.  
+* Reducer.  * HTML.  * CSS.  * React-Bootstrap. 
+* Frontend. * Backend. * Heroku..  
 ```
 
 
@@ -68,7 +83,9 @@ The Shoppies: Movie Awards are coming up soon. A User should be able to visit th
 
 ### Prerequisites
 
-For Computer installation. You will need Git, Node.js, and understand forking cloning and pulling down from github. For using the Application you can simply go to the deployment page. 
+For Computer installation. You will need Git, Node.js, 
+and understand forking cloning and pulling down from github. 
+For using the Application you can simply go to the deployment page. 
 
         
 ### Installation
@@ -77,7 +94,15 @@ For Computer installation. Fork the github re
   
 ### Usage
   
-Type Movie titles in the search bar. View the Details on movie results. Nominate your favorite movies for the awards by clicking the nominate button on the detail pop up window (or modal). you can remove nominees by clicking viewing them on the saved nominee side and clicking the remove nominee button in detailed view. once you have your 5 favorite movie nominees you can submit your nominations using the submit nominations button. if you leave the page or refresh, this application will save your current Movie nominations. Once you submit your nominees and then return to the home page the nominees will be cleared.
+Type Movie titles in the search bar. View the Details on movie results. 
+Nominate your favorite movies for the awards by clicking the nominate 
+button on the detail pop up window (or modal). you can remove nominees 
+by clicking viewing them on the saved nominee side and clicking the 
+remove nominee button in detailed view. once you have your 5 favorite 
+movie nominees you can submit your nominations using the submit 
+nominations button. if you leave the page or refresh, this application 
+will save your current Movie nominations. Once you submit your 
+nominees and then return to the home page the nominees will be cleared.
   
   
 
